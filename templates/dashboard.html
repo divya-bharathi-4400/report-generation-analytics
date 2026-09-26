@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard - Report Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Report Analytics</h2>
+
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/report">Reports</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+
+        <h1>Welcome, {{ username }} 👋</h1>
+
+        <p>
+            Manage your reports and analyze your data from one place.
+        </p>
+
+
+        <!-- Statistics -->
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>📊 Total Reports</h3>
+                <h1>{{ total_reports }}</h1>
+                <p>Total reports generated</p>
+            </div>
+
+
+            <div class="card">
+                <h3>💰 Sales Reports</h3>
+                <h1>{{ sales_reports }}</h1>
+                <p>Sales reports generated</p>
+            </div>
+
+
+            <div class="card">
+                <h3>👥 Employee Reports</h3>
+                <h1>{{ employee_reports }}</h1>
+                <p>Employee reports generated</p>
+            </div>
+
+
+            <div class="card">
+                <h3>📈 Analytics Reports</h3>
+                <h1>{{ analytics_reports }}</h1>
+                <p>Analytics reports generated</p>
+            </div>
+
+        </div>
+
+
+        <!-- Actions -->
+
+        <h2 style="margin-top:45px;">
+            Quick Actions
+        </h2>
+
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <h3>📄 Generate Report</h3>
+
+                <p>
+                    Create a new report and store it
+                    in the database.
+                </p>
+
+                <a href="/report">
+                    <button>Generate Report</button>
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📊 View Analytics</h3>
+
+                <p>
+                    View report statistics through
+                    graphical visualization.
+                </p>
+
+                <a href="/analytics">
+                    <button>View Analytics</button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

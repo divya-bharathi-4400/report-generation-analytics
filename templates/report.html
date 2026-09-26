@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate Report - Report Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Report Analytics</h2>
+
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/report">Reports</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <div class="form-box">
+
+        <h1>📄 Generate Report</h1>
+
+        <p style="text-align:center;">
+            Create a new report and store it in the system.
+        </p>
+
+        <form method="POST">
+
+            <label>Report Name</label>
+
+            <input
+                type="text"
+                name="report_name"
+                placeholder="Enter report name"
+                required
+            >
+
+
+            <label>Report Type</label>
+
+            <select name="report_type">
+
+                <option value="Sales Report">
+                    Sales Report
+                </option>
+
+                <option value="Employee Report">
+                    Employee Report
+                </option>
+
+                <option value="Analytics Report">
+                    Analytics Report
+                </option>
+
+                <option value="Finance Report">
+                    Finance Report
+                </option>
+
+            </select>
+
+
+            <label>Description</label>
+
+            <textarea
+                name="description"
+                rows="5"
+                placeholder="Enter report description..."
+            ></textarea>
+
+
+            <button
+                type="submit"
+                style="width:100%; margin-top:25px;"
+            >
+                Generate Report
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

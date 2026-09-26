@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login - Report Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h1>🔐 Welcome Back</h1>
+
+        <p style="text-align:center;">
+            Login to access your Report Analytics Dashboard
+        </p>
+
+        <form method="POST">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit" style="width:100%; margin-top:25px;">
+                Login
+            </button>
+
+        </form>
+
+        <p style="text-align:center; margin-top:20px;">
+            Don't have an account?
+            <a href="/register">Create Account</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

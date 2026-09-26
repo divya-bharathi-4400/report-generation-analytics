@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Analytics - Report Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Report Analytics</h2>
+
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/report">Reports</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+
+        <h1>📊 Analytics Dashboard</h1>
+
+        <p>
+            Analyze generated reports using data visualization.
+        </p>
+
+
+        <div class="chart-box">
+
+            <h2>Report Statistics</h2>
+
+            <canvas id="reportChart"></canvas>
+
+        </div>
+
+
+        <br>
+
+        <a href="/dashboard">
+            <button>← Back to Dashboard</button>
+        </a>
+
+    </div>
+
+
+    <script>
+
+        const ctx =
+            document.getElementById("reportChart");
+
+        new Chart(ctx, {
+
+            type: "bar",
+
+            data: {
+
+                labels: [
+                    "Sales",
+                    "Employee",
+                    "Analytics",
+                    "Finance"
+                ],
+
+                datasets: [{
+
+                    label: "Number of Reports",
+
+                    data: [
+                        {{ sales_count }},
+                        {{ employee_count }},
+                        {{ analytics_count }},
+                        {{ finance_count }}
+                    ]
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+                        display: true
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        ticks: {
+                            stepSize: 1
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

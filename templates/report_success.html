@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Report Generated</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Report Analytics</h2>
+
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/report">Reports</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <div class="success-box">
+
+        <h1>✓ Report Generated Successfully!</h1>
+
+        <p>
+            Your report has been successfully created
+            and stored in the database.
+        </p>
+
+        <hr>
+
+        <p>
+            <b>Report Name:</b>
+            {{ report_name }}
+        </p>
+
+        <p>
+            <b>Report Type:</b>
+            {{ report_type }}
+        </p>
+
+        <p>
+            <b>Description:</b>
+            {{ description }}
+        </p>
+
+
+        <br>
+
+        <a href="/dashboard">
+            <button>← Back to Dashboard</button>
+        </a>
+
+        <a href="/analytics">
+            <button>View Analytics</button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

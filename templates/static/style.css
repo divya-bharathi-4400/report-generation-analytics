@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* Navigation */
+.navbar {
+    background: #111827;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: white;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #93c5fd;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #374151;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Buttons */
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 8px 5px 8px 0;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Forms */
+.form-box {
+    background: white;
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Analytics */
+.chart-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+}
+
+/* Success */
+.success-box {
+    background: white;
+    max-width: 650px;
+    margin: 70px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.success-box h1 {
+    color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+    }
+
+    .container {
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
